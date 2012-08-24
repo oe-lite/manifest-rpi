@@ -1,0 +1,5 @@
+inherit kernel
+require ${PN}.inc
+require ${PN}-${PV}.inc
+KERNEL_IMAGE_DEPLOY_FILE = "${MACHINE}-linux-${V}-${PV}-${DATETIME}${KERNEL_IMAGE_DEPLOY_EXT}"
+KERNEL_IMAGE_DEPLOY_LINK = "${MACHINE}-linux-${V}${KERNEL_IMAGE_DEPLOY_EXT}"
