@@ -1,0 +1,35 @@
+#!/bin/bash 
+set -x -e
+
+MEDIA=/dev/mmcblk0
+PART_ROOTFS=/dev/mmcblk0p1
+UBOOT=b740-u-boot-0_1_0.bin
+KERNEL=b740-linux-0_1_0.bin
+ROOTFS=b740-rootfs-0_1_0.tar.gz
+
+#######################
+ls -l $MEDIA
+sleep 5
+
+umount /media/*  || :
+
+dd if=/dev/zero of=$MEDIA bs=512 count=1
+partprobe $MEDIA
+
+sfdisk -uM $MEDIA <<EOF
+8,192,83
+200,,83
+EOF
+sleep 1
+partprobe $MEDIA
+
+dd if=$UBOOT of=$MEDIA bs=1k seek=1 skip=1
+dd if=$KERNEL of=$MEDIA bs=1k seek=1024 skip=0
+mkfs.ext2 -L rootfs $PART_ROOTFS
+
+[ -r $ROOTFS ]
+mkdir -p /mnt/tmp-sdrootfs
+mount -t ext2 $PART_ROOTFS /mnt/tmp-sdrootfs
+tar --strip-components=1 -xf $ROOTFS -C /mnt/tmp-sdrootfs
+umount /mnt/tmp-sdrootfs
+rm -rf /mnt/tmp-sdrootfs
