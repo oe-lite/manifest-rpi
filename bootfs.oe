@@ -1,0 +1,11 @@
+
+inherit archive-image
+RECIPE_TYPES = "machine"
+
+IMAGE_BASENAME = "${MACHINE}-${DISTRO}-bootfs"
+IMAGE_FULLNAME = "${IMAGE_BASENAME}-${DATETIME}"
+
+RDEPENDS += "\
+       bcm2835-bootfiles \
+       kernel \
+	"
