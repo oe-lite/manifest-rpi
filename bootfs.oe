@@ -7,5 +7,5 @@ IMAGE_FULLNAME = "${IMAGE_BASENAME}-${DATETIME}"
 
 RDEPENDS += "\
        bcm2835-bootfiles \
-       kernel \
+       rpi-uncompressed-kernel \
 	"
