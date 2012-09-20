@@ -2,13 +2,13 @@
 set -x -e
 
 # Call this script with something like:
-# ./meta/raspberrypi/scripts/mk_sd.sh /dev/mmcblk0 tmp/images/ 
+# ./meta/raspberrypi/scripts/mk_sd.sh /dev/mmcblk0 /dev/mmcblk0p1 /dev/mmcblk0p2 tmp/images/ 
 
 MEDIA=$1
-PART_ROOTFS=$MEDIA"p2"
-PART_BOOTFS=$MEDIA"p1"
-ROOTFS=rpi-raspberrypi-rootfs.tar
-BOOTFS=rpi-raspberrypi-bootfs.tar.gz
+PART_ROOTFS=$3
+PART_BOOTFS=$2
+ROOTFS=$4/rpi-raspberrypi-rootfs.tar
+BOOTFS=$4/rpi-raspberrypi-bootfs.tar.gz
 
 #######################
 ls -l $MEDIA
@@ -26,7 +26,7 @@ EOF
 sleep 1
 partprobe $MEDIA
 
-mkfs.vfat -L boot $PART_BOOTFS
+mkfs.vfat -n boot $PART_BOOTFS
 mkfs.ext4 -L rootfs $PART_ROOTFS
 
 [ -r $ROOTFS ]
