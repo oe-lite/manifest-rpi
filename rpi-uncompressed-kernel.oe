@@ -9,7 +9,7 @@ FILES_${PN} = "/kernel.img"
 
 do_install() {
   cd ${BUILD_SYSROOT}/usr/bin/mkimage
-  sed s/python2$/python2.6/ -i imagetool-uncompressed.py
+  sed s/python2$/python/ -i imagetool-uncompressed.py
   ./imagetool-uncompressed.py ${HOST_SYSROOT}/boot/Image
   mv kernel.img ${D}/.
 }
