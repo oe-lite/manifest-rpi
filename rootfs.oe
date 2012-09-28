@@ -1,3 +1,4 @@
+COMPATIBLE_MACHINES = "rpi"
 inherit rootfs image_bom
 
 IMAGE_BASENAME = "${MACHINE}-${DISTRO}-rootfs"

@@ -1,3 +1,4 @@
+COMPATIBLE_MACHINES = "rpi"
 
 inherit archive-image
 RECIPE_TYPES = "machine"
