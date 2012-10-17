@@ -21,7 +21,7 @@
 	url = git://oe-lite.org/gitpython/GitPython.git
 [submodule "meta/raspberrypi"]
 	path = meta/raspberrypi
-	url = git@oe-lite.org:/oe-lite/bcm2835.git
+	url = git://oe-lite.org/oe-lite/bcm2835.git
 [submodule "lib/urlgrabber"]
 	path = lib/urlgrabber
 	url = git://oe-lite.org/urlgrabber.git
