@@ -2,7 +2,7 @@ see instructions on oe-lite.org on how to get requirements for oe-lite.
 
 Next, clone this repository:
 
-oe clone https://github.com/jacobbarsoe/raspberry.git
+oe clone git://oe-lite.org/bsp/raspberrypi.git
 
 add a local.conf in your raspberry/conf dir e.g. by copying local.conf.sample
 you can change PARALLEL_MAKE and SDK_CPU to fit your needs.
