@@ -3,7 +3,7 @@ HOMEPAGE = "N/A"
 LICENSE = "GPL-2.0"
 
 
-DEPENDS += "native:rpi-mkimage kernel"
+DEPENDS += "native:mkimage kernel"
 
 FILES_${PN} = "/kernel.img"
 
