@@ -4,23 +4,14 @@
 [submodule "meta/base"]
 	path = meta/base
 	url = git://oe-lite.org/oe-lite/base.git
-[submodule "meta/xorg"]
-	path = meta/xorg
-	url = git://oe-lite.org/oe-lite/xorg.git
-[submodule "meta/qt"]
-	path = meta/qt
-	url = git://oe-lite.org/oe-lite/qt.git
-[submodule "meta/multimedia"]
-	path = meta/multimedia
-	url = git://oe-lite.org/oe-lite/multimedia.git
 [submodule "lib/fetching/fetching"]
 	path = lib/fetching/fetching
 	url = git://oe-lite.org/python-fetching
 [submodule "lib/GitPython"]
 	path = lib/GitPython
 	url = git://oe-lite.org/gitpython/GitPython.git
-[submodule "meta/raspberrypi"]
-	path = meta/raspberrypi
+[submodule "meta/bcm2835"]
+	path = meta/bcm2835
 	url = git://oe-lite.org/oe-lite/bcm2835.git
 [submodule "lib/urlgrabber"]
 	path = lib/urlgrabber
