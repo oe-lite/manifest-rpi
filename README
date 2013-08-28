@@ -15,7 +15,7 @@ oe bake bootfs rootfs
 #(wait a while)
 #assuming sd-card reader is /dev/sdb (be sure script does not double check
 #if you got it wrong and disk will be erased!
-./meta/raspberrypi/scripts/mk_sd.sh /dev/sdb /dev/sdb1 /dev/sdb2 tmp/images
+./scripts/mk_sd.sh /dev/sdb /dev/sdb1 /dev/sdb2 tmp/images
 
 
 TODO:
