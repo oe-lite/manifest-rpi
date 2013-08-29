@@ -16,3 +16,6 @@
 [submodule "lib/urlgrabber"]
 	path = lib/urlgrabber
 	url = git://oe-lite.org/urlgrabber.git
+[submodule "meta/xorg"]
+	path = meta/xorg
+	url = git://oe-lite.org/oe-lite/xorg.git
