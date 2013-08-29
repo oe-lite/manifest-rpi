@@ -1,0 +1,4 @@
+inherit kernel-headers
+require rpi-linux.inc
+require rpi-linux-branch.inc
+SRC_REV = "commit=ada8b4415ff44d535d63e4291a0eca733bc2ad0f"

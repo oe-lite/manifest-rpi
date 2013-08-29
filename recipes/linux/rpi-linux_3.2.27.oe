@@ -1,0 +1,6 @@
+inherit kernel
+require ${PN}.inc
+require ${PN}-branch.inc
+
+#we pin this recipe for us to use kernel version 3.2.27
+DEFAULT_PREFERENCE = "18"

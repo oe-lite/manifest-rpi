@@ -1,3 +1,0 @@
-inherit kernel-headers
-require rpi-linux.inc
-require rpi-linux-${PV}.inc
