@@ -1,4 +1,4 @@
-DESCRIPTION = "Linux 3.1.9 Kernel"
+DESCRIPTION = "Linux Kernel"
 HOMEPAGE = "N/A"
 LICENSE = "GPL-2.0"
 
