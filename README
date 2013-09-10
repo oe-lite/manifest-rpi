@@ -1,25 +1,25 @@
-see instructions on oe-lite.org on how to get requirements for oe-lite.
-
+See instructions on oe-lite.org on how to get requirements for oe-lite.
 Next, clone this repository:
 
 oe clone git://oe-lite.org/bsp/raspberrypi.git
 
-add a local.conf in your raspberry/conf dir e.g. by copying local.conf.sample
-you can change PARALLEL_MAKE and SDK_CPU to fit your needs.
+Change to the raspberrypi manifest directory:
 
+cd raspberrypi
+
+Now edit conf/local.conf. You can change PARALLEL_MAKE and SDK_CPU
+to fit your needs.
 
 Then you are ready to get a bootable SD-card:
 
-cd raspberry
 oe bake bootfs rootfs 
-#(wait a while)
-#assuming sd-card reader is /dev/sdb (be sure script does not double check
-#if you got it wrong and disk will be erased!
-./scripts/mk_sd.sh /dev/sdb /dev/sdb1 /dev/sdb2 tmp/images
 
+wait a while for the building to complete.
+
+Assuming sd-card reader is /dev/sdb (WARNING: be sure, the script does
+not check if you got it wrong and disk will be erased!
+./scripts/mk_sd.sh /dev/sdb tmp/images
 
 TODO:
 a recipe to setup config.txt to configure overclocking, hdmi, etc.
 (I however just uses the serial console so I have not been in need for this yet)
-
-
