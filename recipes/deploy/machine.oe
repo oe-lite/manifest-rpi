@@ -1,0 +1,11 @@
+COMPATIBLE_MACHINES = "rpi"
+
+addtask deploy before build
+do_deploy[recdeptask] += "DEPENDS:do_deploy"
+def do_stage(d):
+    return
+
+DEPENDS = "\
+	bootfs \
+	rootfs \
+	"
