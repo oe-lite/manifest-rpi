@@ -1,18 +1,16 @@
 [submodule "meta/core"]
 	path = meta/core
-	url = ./meta/core
+	url = ../core.git
+	branch = master
 [submodule "meta/base"]
 	path = meta/base
-	url = ./meta/base
-[submodule "lib/fetching/fetching"]
-	path = lib/fetching/fetching
-	url = ./lib/fetching/fetching
-[submodule "lib/GitPython"]
-	path = lib/GitPython
-	url = ./lib/GitPython
+	url = ../base.git
+	branch = master
 [submodule "meta/bcm2835"]
 	path = meta/bcm2835
-	url = ./meta/bcm2835
+	url = ../bcm2835.git
+	branch = master
 [submodule "lib/urlgrabber"]
 	path = lib/urlgrabber
-	url = ./lib/urlgrabber
+	url = git://oe-lite.org/urlgrabber.git
+	branch = master
