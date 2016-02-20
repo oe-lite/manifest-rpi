@@ -15,6 +15,6 @@ RDEPENDS += "\
 	util/i2cdetect util/i2cdump util/i2cget util/i2cset \
 	ethtool tcpdump \
 	dosfstools-mkfs dosfstools-fsck \
-        util/ltrace util/strace util/gdbserver libthread-db \
+        ltrace strace util/gdbserver libthread-db \
 	"
 
