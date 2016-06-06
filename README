@@ -1,11 +1,15 @@
 See instructions on oe-lite.org on how to get requirements for oe-lite.
 Next, clone this repository:
 
-oe clone git://oe-lite.org/bsp/raspberrypi.git
+oe clone git://github.com/oe-lite/manifest-rpi.git
 
 Change to the raspberrypi manifest directory:
 
 cd raspberrypi
+
+Update all submodules to specified branches:
+
+git submodule update --remote
 
 Now edit conf/local.conf. You can change PARALLEL_MAKE and SDK_CPU
 to fit your needs.
